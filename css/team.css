@@ -1,0 +1,527 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Brandon Grotesque Bold','Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src:url(../fonts/TektonPro-Bold.otf);
+}
+
+@font-face{
+  font-family: 'Poster Bodoni Italic';
+  src:url(../fonts/MATURASC.TTF);
+}
+
+.menu-button{
+	width: 35px;
+    height: 25px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    background-size: contain;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    z-index: 20;
+    position: fixed;
+}
+
+.modalDialog {
+    height: 660px;
+	position: fixed;
+	font-family:'Brandon Grotesque Bold','Helvetica Neue',Arial,Helvetica,sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #6EA84B;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 100%;
+	height: 100%;
+	.box-shadow: 1px 1px 1px 5px #161616;
+	position: relative;
+	margin: 0 auto;
+	padding: 5px 10px 5px 20px;
+	.border-radius: 35px;
+	background-color: #000;
+	background-color: -moz-linear-gradient(#000, #000);
+	background-color: -webkit-linear-gradient(#000, #000);
+	background-color: -o-linear-gradient(#000, #000);
+}
+
+
+.close {
+	height: 35px;
+	position: absolute;
+	right: 78px;
+	text-align: center;
+	top: 20px;
+	width: 35px;
+	text-decoration: none;
+	.-webkit-border-radius: 12px;
+	.-moz-border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+}
+
+
+*{
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.top-content .top-cont-img{
+	width: 100%;
+}
+
+ .top-content .close img{
+	position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    position: center;
+    size: cover;
+}
+
+.modalDialog .open-menu .logo{
+    display: block;
+    position: fixed;
+    z-index: 2;
+    left: 10px;
+    top: -35px;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    float: left;
+    padding: 0px
+}
+
+.modalDialog .open-menu .logo a{
+    display: block;
+    position: fixed;
+    z-index: 2;
+    left: 10px;
+    top: -35px;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    float: left;
+    padding: 0px
+}
+
+.modalDialog .open-menu .logo #logo{
+    display: block;
+    position: fixed;
+    z-index: 2;
+    left: 10px;
+    top: -35px;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    float: left;
+    padding: 0px
+}
+
+.modalDialog .menu .nav-menu{
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    white-space: normal;
+    clear: both;
+    margin: 0 auto;
+    margin-top: 120px
+}
+
+.modalDialog .menu .nav-menu .categories{
+    width: 50.5%;
+    padding: 0 10px;
+    float: left;
+    height: 400px;
+    display: block;
+    display: inline-block;
+ 	vertical-align: top;
+}
+
+.modalDialog .menu .nav-menu ul{
+    list-style: none;
+}
+
+
+.modalDialog .menu .nav-menu .categories li{
+    display: list-item;
+    height: 75px;
+    width: 100%;
+}
+
+.modalDialog .menu .nav-menu .categories a{
+    margin-top: 43.75px;
+    margin-bottom: 43.75px;
+    padding-bottom: 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: 'Brandon Grotesque Medium','Helvetica Neue',Arial,Helvetica,sans-serif;
+    line-height: 130%;
+    font-size: 1.5em;
+}
+
+.modalDialog .menu .nav-menu .categories a{
+    left: 0%;
+    -o-transition-property: left, color;
+    -o-transition-duration: .7s, .15s;
+    -o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    padding-left: 25px;
+    text-decoration: none;
+    color: seagreen;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.modalDialog .menu .nav-menu .categories a:hover {
+    position: relative;
+    -webkit-transition: top 0.15s cubic-bezier(0.39, 0.58, 0.57, 1) 0s;
+    -moz-transition: top 0.15s cubic-bezier(0.39, 0.58, 0.57, 1) 0s;
+    -ms-transition: top 0.15s cubic-bezier(0.39, 0.58, 0.57, 1) 0s;
+    -o-transition: top 0.15s cubic-bezier(0.39, 0.58, 0.57, 1) 0s;
+    transition: top 0.15s cubic-bezier(0.39, 0.58, 0.57, 1) 0s;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.modalDialog .menu .socials{
+    height: 50px;
+    padding: 0 10px;
+    top: 0px;
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.modalDialog .menu .socials .social{
+    display: inline-block;
+    padding: 0 0 0 20px;
+    vertical-align: top;
+    list-style: none;
+}
+
+.modalDialog .menu .socials .social li{
+    float: left;
+    display: list-item;
+}
+
+.modalDialog .menu .socials .social li a{
+    display: block;
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    width: 50px
+}
+
+.mlogo {
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+    cursor: pointer;
+    margin-left: -100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    height: 100px;
+    background-color: rgb(161, 159, 159);
+}
+
+header .title {
+    margin-right: 35%;
+    text-transform: uppercase;
+    font-family: 'Brandon Grotesque Bold','Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 2.5em;
+    color: rgba(0, 97, 5, 0.945);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.title>span {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#header{
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #191919;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-width: 100%;
+    background-size: cover;
+    background-attachment: initial;
+    background-image: url(../images/team1.jpg);
+}
+
+#header .heading{
+    z-index: 2;
+}
+
+.heading{
+    position: relative;
+    top: 30%;
+    display: inline-block;
+    width: 35%;
+    white-space: normal;
+}
+
+#header .heading h1.heading-txt {
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: 'Poster Bodoni Italic','Helvetica Neue',Arial,Helvetica,sans-serif;
+    line-height: 1em;
+    font-size: 4em;
+    border: none;
+}
+
+hr {
+    display: none;
+}
+
+#header h1{
+  color: green;
+  text-decoration: underline;
+}
+
+.heading h1{
+  margin: 0;
+  text-align: left;
+}
+
+.content .main-cont {
+    text-align: justify;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content .hd-light {
+    font-family: 'Brandon Grotesque Bold','Helvetica Neue', Helvetica, sans-serif;
+    letter-spacing: 5px;
+    font-style: italic;
+    font-weight: lighter;
+    color: grey;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-left: 2px solid green;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+.content .main-cont blockquote {
+    text-align: justify;
+    width: 40%;
+    padding: 0;
+    font-size: 1.5em;
+    font-family: 'Brandon Grotesque Regular','Helvetica Neue',Arial,Helvetica,sans-serif;
+    line-height: 130%;
+    vertical-align: baseline;
+    border: 0;
+    position: relative;
+    left: 30%;
+    margin-top: 50px
+}
+
+main .team-list {
+    text-align: justify;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    background-color:  #000;
+}
+
+.team-list .hd-light {
+    font-family: 'Brandon Grotesque Bold','Helvetica Neue', Helvetica, sans-serif;
+    letter-spacing: 5px;
+    font-style: italic;
+    font-weight: lighter;
+    color: grey;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-left: 2px solid green;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+main .team-list .the-team {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    left: 25%;
+}
+
+main .team-list .the-team span {
+    color: #25b908;
+    font-weight: bold;
+}
+
+main .team-list .the-team p, a {
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+main .team-list .the-team #thick{
+    background-color: #ccc;
+}
+
+main .team-list .the-team #light {
+    background-color: #EEEEEE;
+}
+
+footer{
+    background-image: url(../images/map-partners.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    color: #ffffff
+}
+
+footer .logo-f {
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+    cursor: pointer;
+    margin-left: 35px;
+    padding: 0
+}
+
+footer .f-text{
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.5em;
+    width: 100%;
+}
+
+footer .f-text-sp {
+    letter-spacing: 5px;
+}
+
+footer .footer-widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 30px;
+    width: 80%;
+    float: right;
+}
+
+footer .footer-widget .contact>h2 {
+    padding: 20px;
+    color: #25b908;
+    text-decoration: underline;
+}
+
+footer .footer-widget .contact>p {
+    padding: 20px;
+}
+
+footer .footer-widget .contact>strong {
+    padding: 20px;
+}
+
+footer .footer-widget .contact>strong a {
+    color: #ffffff;
+}
+
+
+footer .footer-widget .contact>a button {
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 19px 65px 19px 70px;
+    cursor: pointer;
+    vertical-align: top;
+    text-decoration: none;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    background-color: green;
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Brandon Grotesque Bold','Helvetica Neue',Helvetica,sans-serif;
+    line-height: 130%;
+}
+
+footer .footer-widget .contact> a button:hover {
+    color: #fff;
+    background-color: #25b908;
+    border: none;
+}
+
+footer .footer-widget .f-socials {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+footer .footer-widget .f-socials .social li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+footer .footer-widget .partners>h2 {
+    padding: 20px;
+    color: #25b908;
+    text-decoration: underline;
+}
+
+footer .footer-widget .partners>p {
+    padding: 20px
+}
